@@ -1,0 +1,68 @@
+@import "../core/mixins";
+@import "../core/variables";
+
+.banner {
+  &__effect {
+    border-bottom: 5px solid $primary;
+  }
+
+  &__container {
+    @include d-flex(flex-start, space-around, column);
+    height: 100%;
+
+    &__header {
+      @include d-flex(center, flex-start);
+    }
+
+    &__body {
+      max-width: 600px;
+    }
+
+    &__footer {
+      @include d-flex(center, center);
+    }
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .banner {
+    height: auto;
+
+    &__container {
+      &__header {
+        &__title {
+          @include d-flex(center, center);
+        }
+
+        &__divider {
+          display: none !important;
+        }
+      }
+
+      &__body {
+        width: 100%;
+        margin: 2rem 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .banner {
+    height: 400px;
+    padding: 2rem 0;
+
+    &__container {
+      &__header {
+        &__divider {
+          display: block !important;
+        }
+      }
+
+      &__body {
+        width: 100%;
+        margin: 2rem 0;
+      }
+    }
+  }
+}
