@@ -1,8 +1,0 @@
-@import "../core/mixins";
-
-.card-filter {
-  min-width: 80px;
-  min-height: 85px;
-  @include d-flex(center, center, column);
-  text-align: center;
-}
