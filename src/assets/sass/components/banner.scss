@@ -7,11 +7,11 @@
   }
 
   &__container {
-    @include d-flex(start, space-around, column);
+    @include d-flex(flex-start, space-around, column);
     height: 100%;
 
     &__header {
-      @include d-flex(center, start);
+      @include d-flex(center, flex-start);
     }
 
     &__body {
