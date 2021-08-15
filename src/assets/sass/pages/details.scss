@@ -1,0 +1,39 @@
+@import "../core/mixins";
+@import "../core/variables";
+
+.detail {
+  &__header {
+    @include d-flex(center, flex-start);
+    color: $primary;
+
+    &__title {
+      font-size: 1.3rem;
+    }
+
+    &__link {
+      text-decoration: none;
+      @include d-flex(center, center);
+      transition: ease-in-out 0.3s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__body {
+    &__images {
+      margin: 1rem 0;
+    }
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+
+    &__footer {
+      @include d-flex(center, flex-start);
+    }
+  }
+}
